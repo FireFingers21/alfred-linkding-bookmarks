@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.firefingers21.linkdingbookmarks</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>1548B684-9B57-4C83-889B-7AB17368732A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>44257FFC-200D-4323-8F39-A91B0B3E4DDC</key>
+		<array/>
+		<key>64D99BDC-7828-4807-8F9A-23AE224E9E39</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6BA68A5D-9EC1-4671-AA5E-99189608FF42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F0DB8215-2BA9-437F-83E3-17CB1EABD504</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>74C96E5F-4974-4901-B09D-1B0E8CE147E8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0288F3D-AC0D-4DC6-960A-99AA91162D20</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>152D09E4-E7D4-4B28-85D3-A338E4208BC3</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>44257FFC-200D-4323-8F39-A91B0B3E4DDC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>83517451-8657-4071-A9D9-BCE60E3988A2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6BA68A5D-9EC1-4671-AA5E-99189608FF42</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>D25BD092-B3A8-46D8-8B64-70A2EA0A54CF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>5162908A-C70C-4251-9BF9-4A477BC67AFA</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>74C96E5F-4974-4901-B09D-1B0E8CE147E8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FF4A840C-CF2D-4B78-92F8-9A193104E139</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>8BF92979-3E8C-43C7-90B6-C5201DF0C6BC</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>77E0F242-EF4F-49EE-B767-B55851F84C6F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>A01FA181-2935-44F9-BB3A-23A15A3B036A</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>77E0F242-EF4F-49EE-B767-B55851F84C6F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F000AA1F-B514-44F9-9998-05E2CF51534F</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>83517451-8657-4071-A9D9-BCE60E3988A2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>56D023CC-6B52-48FC-9ED5-65F35520269C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E3A362CE-3843-450A-9BC5-F15703CAD8CC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D25BD092-B3A8-46D8-8B64-70A2EA0A54CF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F0DB8215-2BA9-437F-83E3-17CB1EABD504</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>F47E98E5-D0E5-448E-A736-A2FDBFC81C33</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FB471DC1-D3ED-428D-A744-5208E260352F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FF4A840C-CF2D-4B78-92F8-9A193104E139</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E3A362CE-3843-450A-9BC5-F15703CAD8CC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>FireFingers21</string>
+	<key>description</key>
+	<string>Search linkding bookmarks in Alfred</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>linkding Bookmarks</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>hotstring</key>
+				<string></string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1548B684-9B57-4C83-889B-7AB17368732A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>newLink="${baseUrl}/bookmarks/new?url=${1}"
+
+if [[ -z "${browser}" ]];then
+	open "${newLink}"
+else
+	open -b "${browser}" "${newLink}"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FB471DC1-D3ED-428D-A744-5208E260352F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:linkding_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string>readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
+
+# Auto Update
+[[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" &amp;&amp; "${autoUpdate}" -ne 0 ]] &amp;&amp; reload=$(./reload.sh)
+
+# Load Bookmarks
+jq -s \
+   --arg baseUrl "$baseUrl" \
+   --arg useDesc "$useDesc" \
+   --arg useURL "$useURL" \
+   --arg useTag "$useTag" \
+   '{
+	"items": (if (length != 0) and (.[].results | length &gt; 0) then
+		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
+			"uid": .id,
+			"title": (.title // .website_title),
+			"subtitle": "\(.tag_names[0] | if . then "["+.+"] " else "" end)\(.url)",
+			"arg": .url,
+			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
+			"mods": {
+				"cmd": {
+					"subtitle": "Open in secondary browser",
+					"arg": .url,
+					"variables": { "bSecondary": true }
+				},
+				"alt": {
+					"subtitle": "Edit in linkding",
+					"arg": "\($baseUrl)/bookmarks/\(.id)/edit"
+				},
+				"ctrl": {
+					"subtitle": "Delete from linkding",
+					"arg": "",
+					"variables": {
+						"bId": .id,
+						"bTitle": (.title // .website_title),
+						"bUrl": .url
+					}
+				}
+			}
+		}end))
+	elif length == 0 then
+		[{
+			"title": "No Bookmarks Found",
+			"subtitle": "Press ↩ to load bookmarks",
+			"arg": "reload"
+		}]
+	else
+		[{
+			"title": "Search Bookmarks...",
+			"subtitle": "You have no bookmarks",
+			"valid": "false"
+		}]
+	end)
+}' "${bookmarks_file}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search Bookmarks...</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>externalid</key>
+				<string>main</string>
+				<key>inputmode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsfiles</key>
+				<false/>
+				<key>acceptsmulti</key>
+				<integer>0</integer>
+				<key>acceptstext</key>
+				<false/>
+				<key>acceptsurls</key>
+				<true/>
+				<key>name</key>
+				<string>Bookmark URL</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.universalaction</string>
+			<key>uid</key>
+			<string>F47E98E5-D0E5-448E-A736-A2FDBFC81C33</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>linkdingReload</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>E0288F3D-AC0D-4DC6-960A-99AA91162D20</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reload</string>
+						<key>outputlabel</key>
+						<string>reload</string>
+						<key>uid</key>
+						<string>152D09E4-E7D4-4B28-85D3-A338E4208BC3</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>open</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Secondary browser selection
+[[ "${bSecondary}" &amp;&amp; -n "${browser2}" ]] &amp;&amp; browser="${browser2}"
+
+# Primary browser selection
+if [[ -z "${browser}" ]];then
+	open "${1}"
+else
+	open -b "${browser}" "${1}"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>44257FFC-200D-4323-8F39-A91B0B3E4DDC</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>[[ -n "${1}" ]] &amp;&amp; curl -s -X DELETE "${baseUrl}/api/bookmarks/${1}" -H "Authorization: Token ${token}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F0DB8215-2BA9-437F-83E3-17CB1EABD504</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>cat &lt;&lt; EOB
+{"items": [
+	{
+		"title": "${bTitle}",
+		"subtitle": "${bUrl}",
+		"valid": "false",
+		"mods": {
+			"ctrl": {
+				"subtitle": "${bUrl}"
+			}
+		}
+	},
+	{
+		"title": "Confirm Delete",
+		"subtitle": "You can't undo this action",
+		"arg": "${bId}"
+	},
+	{
+		"title": "Cancel",
+		"arg": ""
+	}
+]}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6BA68A5D-9EC1-4671-AA5E-99189608FF42</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>linkdingReload</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>reload.sh</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>inboundconfig</key>
+			<dict>
+				<key>externalid</key>
+				<string>linkdingReload</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FF4A840C-CF2D-4B78-92F8-9A193104E139</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E3A362CE-3843-450A-9BC5-F15703CAD8CC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>main</string>
+				<key>passinputasargument</key>
+				<false/>
+				<key>passvariables</key>
+				<false/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>4</integer>
+						<key>matchstring</key>
+						<string>Bookmarks Updated</string>
+						<key>outputlabel</key>
+						<string></string>
+						<key>uid</key>
+						<string>5162908A-C70C-4251-9BF9-4A477BC67AFA</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>D25BD092-B3A8-46D8-8B64-70A2EA0A54CF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reload</string>
+						<key>outputlabel</key>
+						<string>reload</string>
+						<key>uid</key>
+						<string>8BF92979-3E8C-43C7-90B6-C5201DF0C6BC</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>new</string>
+						<key>outputlabel</key>
+						<string>new</string>
+						<key>uid</key>
+						<string>A01FA181-2935-44F9-BB3A-23A15A3B036A</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>open</string>
+						<key>outputlabel</key>
+						<string>open</string>
+						<key>uid</key>
+						<string>F000AA1F-B514-44F9-9998-05E2CF51534F</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>browser</string>
+						<key>outputlabel</key>
+						<string>browser</string>
+						<key>uid</key>
+						<string>56D023CC-6B52-48FC-9ED5-65F35520269C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Browser</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>1</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:linkding_keyword}::||{var:linkding_keyword} ::</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>readonly last_updated_file="${alfred_workflow_data}/lastUpdated.txt"
+if [[ -f "${last_updated_file}" ]];then
+	source "${last_updated_file}"
+else
+	lastUpdated="Never"
+fi
+
+cat &lt;&lt; EOB
+{"items": [
+	{
+		"title": "Reload Bookmarks",
+		"subtitle": "Last Updated: ${lastUpdated}",
+		"arg": "",
+		"variables": { "pref_id": "reload" }
+	},
+	{
+		"title": "New Bookmark",
+		"arg": "",
+		"variables": { "pref_id": "new" },
+		"mods": {
+			"cmd": {
+				"subtitle": "Open in secondary browser",
+				"arg": "",
+				"variables": {
+					"bSecondary": true,
+					"pref_id": "new"
+				}
+			}
+		}
+	},
+	{
+		"title": "Open linkding",
+		"arg": "",
+		"variables": { "pref_id": "open" },
+		"mods": {
+			"cmd": {
+				"subtitle": "Open in secondary browser",
+				"arg": "",
+				"variables": {
+					"bSecondary": true,
+					"pref_id": "open"
+				}
+			}
+		}
+	},
+	{
+		"title": "Browser Settings",
+		"subtitle": "Select the default browsers for ${alfred_workflow_name}",
+		"arg": "",
+		"variables": { "pref_id": "browser" }
+	},
+]}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>64D99BDC-7828-4807-8F9A-23AE224E9E39</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Select URL
+if [[ "${pref_id}" == "open" ]];then
+	url="${baseUrl}/bookmarks"
+elif [[ "${pref_id}" == "new" ]];then
+	url="${baseUrl}/bookmarks/new"
+fi
+
+# Secondary browser selection
+[[ "${bSecondary}" &amp;&amp; -n "${browser2}" ]] &amp;&amp; browser="${browser2}"
+
+# Primary browser selection
+if [[ -z "${browser}" ]];then
+	open "${url}"
+else
+	open -b "${browser}" "${url}"
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>77E0F242-EF4F-49EE-B767-B55851F84C6F</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run argv
+	tell application id "com.runningwithcrayons.Alfred"
+		set bundleID to (system attribute "alfred_workflow_bundleid")
+		set configuration (system attribute "setting") to value argv in workflow bundleID
+	end tell
+end run</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>74C96E5F-4974-4901-B09D-1B0E8CE147E8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{var:notifier}</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>if [[ $setting == browser ]];then
+	default="System Default"
+else
+	default="&lt;None&gt;"
+fi
+
+currSelected='
+	"subtitle": "Currently Selected",
+	"match": "",
+	"valid": "false"
+'
+
+cat &lt;&lt; EOB
+{"items": [
+	{
+		"title": "$default",
+		"arg": "",
+		$(if [[ -z ${(P)setting} ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Safari",
+		"arg": "com.apple.Safari",
+		$(if [[ ${(P)setting} == "com.apple.Safari" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Google Chrome",
+		"arg": "com.google.Chrome",
+		$(if [[ ${(P)setting} == "com.google.Chrome" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Firefox",
+		"arg": "org.mozilla.firefox",
+		$(if [[ ${(P)setting} == "org.mozilla.firefox" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Microsoft Edge",
+		"arg": "com.microsoft.edgemac",
+		$(if [[ ${(P)setting} == "com.microsoft.edgemac" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Arc",
+		"arg": "company.thebrowser.Browser",
+		$(if [[ ${(P)setting} == "company.thebrowser.Browser" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Orion",
+		"arg": "com.kagi.kagimacOS",
+		$(if [[ ${(P)setting} == "com.kagi.kagimacOS" ]]; then; echo $currSelected; fi)
+	},
+	{
+		"title": "Opera",
+		"arg": "com.operasoftware.Opera",
+		$(if [[ ${(P)setting} == "com.operasoftware.Opera" ]]; then; echo $currSelected; fi)
+	}
+]}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select Browser</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>cat &lt;&lt; EOB
+{"items": [
+	{
+		"title": "Primary Browser",
+		"subtitle": "Change the primary browser for opening bookmarks",
+		"arg": "",
+		"variables": {
+			"setting": "browser",
+			"notifier": "Primary browser changed"
+		}
+	},
+	{
+		"title": "Secondary Browser",
+		"subtitle": "Change the secondary browser for opening bookmarks",
+		"arg": "",
+		"variables": {
+			"setting": "browser2",
+			"notifier": "Secondary browser changed"
+		}
+	}
+]}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Select Setting</string>
+				<key>type</key>
+				<integer>11</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>83517451-8657-4071-A9D9-BCE60E3988A2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>## Setup
+
+Set the Base URL and API Token of your [linkding](https://github.com/sissbruecker/linkding) installation in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). You can find the API Token from your linkding Settings → Integrations → Rest API.
+
+**Note**: This workflow requires [jq](https://jqlang.github.io/jq/) to function.
+
+## Usage
+
+Search for your [linkding](https://github.com/sissbruecker/linkding) bookmarks using the `bm` keyword.
+
+![Searching for linkding bookmarks](images/about/keyword.png)
+
+Type to refine your search. Bookmarks are always filtered by title, while filtering by description, URL, and tags is configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+
+![Narrowing search for linkding bookmarks](images/about/tagFilter.png)
+
+* &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
+* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
+
+Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+
+![Other actions](images/about/inlineSettings.png)
+
+Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/). See a timestamp of the last successful reload from the other actions as shown in the image above.
+
+Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
+
+Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is case sensitive.</string>
+	<key>uidata</key>
+	<dict>
+		<key>1548B684-9B57-4C83-889B-7AB17368732A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>8</integer>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>630</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>720</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
+		<key>44257FFC-200D-4323-8F39-A91B0B3E4DDC</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Open URL</string>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>120</real>
+		</dict>
+		<key>64D99BDC-7828-4807-8F9A-23AE224E9E39</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>note</key>
+			<string>Configuration</string>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>550</real>
+		</dict>
+		<key>6BA68A5D-9EC1-4671-AA5E-99189608FF42</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Confirm Delete</string>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>74C96E5F-4974-4901-B09D-1B0E8CE147E8</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>585</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
+		<key>77E0F242-EF4F-49EE-B767-B55851F84C6F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>550</real>
+		</dict>
+		<key>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>345</real>
+			<key>ypos</key>
+			<real>35</real>
+		</dict>
+		<key>83517451-8657-4071-A9D9-BCE60E3988A2</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
+		<key>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Main Action &amp; Keyword</string>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>D25BD092-B3A8-46D8-8B64-70A2EA0A54CF</key>
+		<dict>
+			<key>xpos</key>
+			<real>580</real>
+			<key>ypos</key>
+			<real>430</real>
+		</dict>
+		<key>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>655</real>
+		</dict>
+		<key>E0288F3D-AC0D-4DC6-960A-99AA91162D20</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>11</integer>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>540</real>
+		</dict>
+		<key>E3A362CE-3843-450A-9BC5-F15703CAD8CC</key>
+		<dict>
+			<key>note</key>
+			<string>Notify if successful</string>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
+		<key>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</key>
+		<dict>
+			<key>xpos</key>
+			<real>630</real>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
+		<key>F0DB8215-2BA9-437F-83E3-17CB1EABD504</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Delete from linkding</string>
+			<key>xpos</key>
+			<real>450</real>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>F47E98E5-D0E5-448E-A736-A2FDBFC81C33</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>630</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>FB471DC1-D3ED-428D-A744-5208E260352F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Add to linkding</string>
+			<key>xpos</key>
+			<real>775</real>
+			<key>ypos</key>
+			<real>15</real>
+		</dict>
+		<key>FF4A840C-CF2D-4B78-92F8-9A193104E139</key>
+		<dict>
+			<key>note</key>
+			<string>Reload Bookmarks</string>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>400</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>bm</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>linkding Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>linkding_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search by Description</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Search Filters</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useDesc</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search by URL</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useURL</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search by Tag</string>
+			</dict>
+			<key>description</key>
+			<string>Prefixing words with # filters by tag</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useTag</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>System Default</string>
+						<string></string>
+					</array>
+					<array>
+						<string>Safari</string>
+						<string>com.apple.Safari</string>
+					</array>
+					<array>
+						<string>Google Chrome</string>
+						<string>com.google.Chrome</string>
+					</array>
+					<array>
+						<string>Firefox</string>
+						<string>org.mozilla.firefox</string>
+					</array>
+					<array>
+						<string>Microsoft Edge</string>
+						<string>com.microsoft.edgemac</string>
+					</array>
+					<array>
+						<string>Arc</string>
+						<string>company.thebrowser.Browser</string>
+					</array>
+					<array>
+						<string>Orion</string>
+						<string>com.kagi.kagimacOS</string>
+					</array>
+					<array>
+						<string>Opera</string>
+						<string>com.operasoftware.Opera</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Primary browser for opening bookmarks</string>
+			<key>label</key>
+			<string>Default Browsers</string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>browser</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>pairs</key>
+				<array>
+					<array>
+						<string>&lt;None&gt;</string>
+						<string></string>
+					</array>
+					<array>
+						<string>Safari</string>
+						<string>com.apple.Safari</string>
+					</array>
+					<array>
+						<string>Google Chrome</string>
+						<string>com.google.Chrome</string>
+					</array>
+					<array>
+						<string>Firefox</string>
+						<string>org.mozilla.firefox</string>
+					</array>
+					<array>
+						<string>Microsoft Edge</string>
+						<string>com.microsoft.edgemac</string>
+					</array>
+					<array>
+						<string>Arc</string>
+						<string>company.thebrowser.Browser</string>
+					</array>
+					<array>
+						<string>Orion</string>
+						<string>com.kagi.kagimacOS</string>
+					</array>
+					<array>
+						<string>Opera</string>
+						<string>com.operasoftware.Opera</string>
+					</array>
+				</array>
+			</dict>
+			<key>description</key>
+			<string>Secondary browser for opening bookmarks</string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>popupbutton</string>
+			<key>variable</key>
+			<string>browser2</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>defaultvalue</key>
+				<integer>0</integer>
+				<key>markercount</key>
+				<integer>13</integer>
+				<key>maxvalue</key>
+				<integer>24</integer>
+				<key>minvalue</key>
+				<integer>0</integer>
+				<key>onlystoponmarkers</key>
+				<true/>
+				<key>showmarkers</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Hourly interval to automatically reload bookmarks (0 to disable)</string>
+			<key>label</key>
+			<string>Auto-Update</string>
+			<key>type</key>
+			<string>slider</string>
+			<key>variable</key>
+			<string>autoUpdate</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>https://linkding.mydomain.com</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>The base URL of your linkding installation, without the /bookmark path or a trailing slash</string>
+			<key>label</key>
+			<string>Base URL</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>baseUrl</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>Token</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Used to authenticate against the linkding API. You can find this on your linkding settings page.</string>
+			<key>label</key>
+			<string>API Token</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>token</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>5000</string>
+				<key>placeholder</key>
+				<string>5000</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Limits the maximum number of bookmarks Alfred can pull from linkding</string>
+			<key>label</key>
+			<string>API Limit</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>limit</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>2024.5</string>
+	<key>webaddress</key>
+	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
+</dict>
+</plist>
