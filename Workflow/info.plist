@@ -390,6 +390,9 @@ jq -s \
 						"bTitle": (.title // .website_title),
 						"bUrl": .url
 					}
+				},
+				"shift": {
+					"subtitle": ((.description // .website_description) // "")
 				}
 			}
 		}end))
@@ -1053,42 +1056,42 @@ cat &lt;&lt; EOB
 	{
 		"title": "$default",
 		"arg": "",
-		$(if [[ -z ${(P)setting} ]]; then; echo $currSelected; fi)
+		$([[ -z ${(P)setting} ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Safari",
 		"arg": "com.apple.Safari",
-		$(if [[ ${(P)setting} == "com.apple.Safari" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Google Chrome",
 		"arg": "com.google.Chrome",
-		$(if [[ ${(P)setting} == "com.google.Chrome" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Firefox",
 		"arg": "org.mozilla.firefox",
-		$(if [[ ${(P)setting} == "org.mozilla.firefox" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Microsoft Edge",
 		"arg": "com.microsoft.edgemac",
-		$(if [[ ${(P)setting} == "com.microsoft.edgemac" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "com.microsoft.edgemac" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Arc",
 		"arg": "company.thebrowser.Browser",
-		$(if [[ ${(P)setting} == "company.thebrowser.Browser" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Orion",
 		"arg": "com.kagi.kagimacOS",
-		$(if [[ ${(P)setting} == "com.kagi.kagimacOS" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "com.kagi.kagimacOS" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Opera",
 		"arg": "com.operasoftware.Opera",
-		$(if [[ ${(P)setting} == "com.operasoftware.Opera" ]]; then; echo $currSelected; fi)
+		$([[ ${(P)setting} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
 	}
 ]}
 EOB</string>
@@ -1203,6 +1206,7 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
 * &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
+* &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
@@ -1421,7 +1425,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<key>default</key>
 				<string>bm</string>
 				<key>placeholder</key>
-				<string></string>
+				<string>bm</string>
 				<key>required</key>
 				<false/>
 				<key>trim</key>
@@ -1683,7 +1687,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.5</string>
+	<string>2024.6</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>
