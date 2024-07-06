@@ -21,6 +21,21 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3B41798A-C85B-4FF8-9251-D1FED8C63E7E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>73F5B7F0-F9FA-49FF-8DF4-D6CF36D3985C</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>44257FFC-200D-4323-8F39-A91B0B3E4DDC</key>
 		<array/>
 		<key>64D99BDC-7828-4807-8F9A-23AE224E9E39</key>
@@ -219,7 +234,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</string>
+				<string>3B41798A-C85B-4FF8-9251-D1FED8C63E7E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -356,7 +371,7 @@ fi</string>
 				<string>readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
 
 # Auto Update
-[[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" &amp;&amp; "${autoUpdate}" -ne 0 ]] &amp;&amp; reload=$(./reload.sh)
+[[ -f "${bookmarks_file}" ]] &amp;&amp; [[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" &amp;&amp; "${autoUpdate}" -ne 0 ]] &amp;&amp; reload=$(./reload.sh)
 
 # Load Bookmarks
 jq -s \
@@ -364,6 +379,7 @@ jq -s \
    --arg useDesc "$useDesc" \
    --arg useURL "$useURL" \
    --arg useTag "$useTag" \
+   --arg useQL "$useQL" \
    '{
 	"items": (if (length != 0) and (.[].results | length &gt; 0) then
 		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
@@ -372,6 +388,8 @@ jq -s \
 			"subtitle": "\(.tag_names[0] | if . then "["+.+"] " else "" end)\(.url)",
 			"arg": .url,
 			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
+			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
+			"text": { "largetype": .url },
 			"mods": {
 				"cmd": {
 					"subtitle": "Open in secondary browser",
@@ -415,7 +433,7 @@ jq -s \
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>{const:alfred_workflow_description}</string>
 				<key>title</key>
 				<string>Search Bookmarks...</string>
 				<key>type</key>
@@ -548,7 +566,7 @@ fi</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>[[ -n "${1}" ]] &amp;&amp; curl -s -X DELETE "${baseUrl}/api/bookmarks/${1}" -H "Authorization: Token ${token}"</string>
+				<string>[[ -n "${1}" ]] &amp;&amp; curl -s -X DELETE "${baseUrl}/api/bookmarks/${1}/" -H "Authorization: Token ${token}" &amp;&amp; echo -n "reload"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -616,6 +634,8 @@ EOB</string>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -648,6 +668,38 @@ EOB</string>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reload</string>
+						<key>outputlabel</key>
+						<string>reload</string>
+						<key>uid</key>
+						<string>73F5B7F0-F9FA-49FF-8DF4-D6CF36D3985C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>3B41798A-C85B-4FF8-9251-D1FED8C63E7E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -865,12 +917,10 @@ cat &lt;&lt; EOB
 	{
 		"title": "Reload Bookmarks",
 		"subtitle": "Last Updated: ${lastUpdated}",
-		"arg": "",
 		"variables": { "pref_id": "reload" }
 	},
 	{
 		"title": "New Bookmark",
-		"arg": "",
 		"variables": { "pref_id": "new" },
 		"mods": {
 			"cmd": {
@@ -885,7 +935,6 @@ cat &lt;&lt; EOB
 	},
 	{
 		"title": "Open linkding",
-		"arg": "",
 		"variables": { "pref_id": "open" },
 		"mods": {
 			"cmd": {
@@ -901,7 +950,6 @@ cat &lt;&lt; EOB
 	{
 		"title": "Browser Settings",
 		"subtitle": "Select the default browsers for ${alfred_workflow_name}",
-		"arg": "",
 		"variables": { "pref_id": "browser" }
 	},
 ]}
@@ -910,6 +958,8 @@ EOB</string>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1099,6 +1149,8 @@ EOB</string>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1146,7 +1198,6 @@ EOB</string>
 	{
 		"title": "Primary Browser",
 		"subtitle": "Change the primary browser for opening bookmarks",
-		"arg": "",
 		"variables": {
 			"setting": "browser",
 			"notifier": "Primary browser changed"
@@ -1155,7 +1206,6 @@ EOB</string>
 	{
 		"title": "Secondary Browser",
 		"subtitle": "Change the secondary browser for opening bookmarks",
-		"arg": "",
 		"variables": {
 			"setting": "browser2",
 			"notifier": "Secondary browser changed"
@@ -1167,6 +1217,8 @@ EOB</string>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -1236,6 +1288,15 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<real>630</real>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>3B41798A-C85B-4FF8-9251-D1FED8C63E7E</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>580</real>
+			<key>ypos</key>
+			<real>280</real>
 		</dict>
 		<key>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</key>
 		<dict>
@@ -1501,6 +1562,25 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Enable Quick Look</string>
+			</dict>
+			<key>description</key>
+			<string>Tap shift or ⌘Y to preview bookmarks</string>
+			<key>label</key>
+			<string>Preview</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useQL</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string></string>
 				<key>pairs</key>
 				<array>
@@ -1687,7 +1767,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.6</string>
+	<string>2024.7</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>
