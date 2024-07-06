@@ -1,6 +1,6 @@
 #!/bin/zsh --no-rcs
 
-readonly bookmarks=$(curl -s "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
+readonly bookmarks=$(curl -s -X GET "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
 
 case "${bookmarks}" in
 	"")
