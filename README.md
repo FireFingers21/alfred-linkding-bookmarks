@@ -20,9 +20,10 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 
 * <kbd>↩</kbd> Open bookmark in primary browser
 * <kbd>⌘</kbd><kbd>↩</kbd> Open bookmark in secondary browser
-* <kbd>⌘</kbd><kbd>C</kbd> Copy bookmark URL
 * <kbd>⌥</kbd><kbd>↩</kbd> Edit bookmark in linkding
+* <kbd>⇧</kbd><kbd>⌥</kbd><kbd>↩</kbd> View bookmark in linkding
 * <kbd>⌃</kbd><kbd>↩</kbd> Delete bookmark from linkding
+* <kbd>⌘</kbd><kbd>C</kbd> Copy bookmark URL
 * <kbd>⇧</kbd> Hold to show bookmark description
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
@@ -32,5 +33,7 @@ Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows
 Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/). See a timestamp of the last successful reload from the other actions as shown in the image above.
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
+
+![Using the Universal Action](Workflow/images/about/universalAction.png)
 
 Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is case sensitive.

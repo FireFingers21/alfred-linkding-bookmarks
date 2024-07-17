@@ -400,6 +400,10 @@ jq -s \
 					"subtitle": "Edit in linkding",
 					"arg": "\($baseUrl)/bookmarks/\(.id)/edit"
 				},
+				"alt+shift": {
+					"subtitle": "View in linkding",
+					"arg": "\($baseUrl)/bookmarks/\(.id)/details"
+				},
 				"ctrl": {
 					"subtitle": "Delete from linkding",
 					"arg": "",
@@ -432,6 +436,8 @@ jq -s \
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
+				<key>skipuniversalaction</key>
+				<true/>
 				<key>subtext</key>
 				<string>{const:alfred_workflow_description}</string>
 				<key>title</key>
@@ -1255,9 +1261,10 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding
 * &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
 * &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
@@ -1267,6 +1274,8 @@ Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows
 Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/). See a timestamp of the last successful reload from the other actions as shown in the image above.
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
+
+![Using the Universal Action](images/about/universalAction.png)
 
 Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is case sensitive.</string>
 	<key>uidata</key>
@@ -1767,7 +1776,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.7</string>
+	<string>2024.7.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>
