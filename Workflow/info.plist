@@ -369,9 +369,13 @@ fi</string>
 				<string>Loading...</string>
 				<key>script</key>
 				<string>readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
+readonly favicon_folder="${alfred_workflow_data}/favicons"
 
 # Auto Update
 [[ -f "${bookmarks_file}" ]] &amp;&amp; [[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" &amp;&amp; "${autoUpdate}" -ne 0 ]] &amp;&amp; reload=$(./reload.sh)
+
+# Favicon Check
+[[ "${useFavicons}" -eq 1 ]] &amp;&amp; [[ ! -d "${favicon_folder}" ]] &amp;&amp; reload=$(./reload.sh)
 
 # Load Bookmarks
 jq -s \
@@ -380,6 +384,8 @@ jq -s \
    --arg useURL "$useURL" \
    --arg useTag "$useTag" \
    --arg useQL "$useQL" \
+   --arg useFavicons "$useFavicons" \
+   --arg favicon_folder "$favicon_folder" \
    '{
 	"items": (if (length != 0) and (.[].results | length &gt; 0) then
 		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
@@ -390,6 +396,9 @@ jq -s \
 			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
 			"text": { "largetype": .url },
+			"icon": {
+				"path": (try (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end) catch "")
+			},
 			"mods": {
 				"cmd": {
 					"subtitle": "Open in secondary browser",
@@ -545,11 +554,7 @@ jq -s \
 [[ "${bSecondary}" &amp;&amp; -n "${browser2}" ]] &amp;&amp; browser="${browser2}"
 
 # Primary browser selection
-if [[ -z "${browser}" ]];then
-	open "${1}"
-else
-	open -b "${browser}" "${1}"
-fi</string>
+[[ -z "${browser}" ]] &amp;&amp; open "${1}" || open -b "${browser}" "${1}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -911,12 +916,9 @@ EOB</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>readonly last_updated_file="${alfred_workflow_data}/lastUpdated.txt"
-if [[ -f "${last_updated_file}" ]];then
-	source "${last_updated_file}"
-else
-	lastUpdated="Never"
-fi
+				<string># Get lastest cache timestamp
+readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
+readonly lastUpdated=$(date -r "${bookmarks_file}" +"%A, %B %d %Y at %I:%M%p" || printf "Never")
 
 cat &lt;&lt; EOB
 {"items": [
@@ -931,7 +933,6 @@ cat &lt;&lt; EOB
 		"mods": {
 			"cmd": {
 				"subtitle": "Open in secondary browser",
-				"arg": "",
 				"variables": {
 					"bSecondary": true,
 					"pref_id": "new"
@@ -945,7 +946,6 @@ cat &lt;&lt; EOB
 		"mods": {
 			"cmd": {
 				"subtitle": "Open in secondary browser",
-				"arg": "",
 				"variables": {
 					"bSecondary": true,
 					"pref_id": "open"
@@ -991,21 +991,20 @@ EOB</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string># Select URL
-if [[ "${pref_id}" == "open" ]];then
-	url="${baseUrl}/bookmarks"
-elif [[ "${pref_id}" == "new" ]];then
-	url="${baseUrl}/bookmarks/new"
-fi
+case "${pref_id}" in
+	"open")
+		url="${baseUrl}/bookmarks"
+		;;
+	"new")
+		url="${baseUrl}/bookmarks/new"
+		;;
+esac
 
 # Secondary browser selection
 [[ "${bSecondary}" &amp;&amp; -n "${browser2}" ]] &amp;&amp; browser="${browser2}"
 
 # Primary browser selection
-if [[ -z "${browser}" ]];then
-	open "${url}"
-else
-	open -b "${browser}" "${url}"
-fi</string>
+[[ -z "${browser}" ]] &amp;&amp; open "${url}" || open -b "${browser}" "${url}"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1095,11 +1094,7 @@ end run</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>if [[ $setting == browser ]];then
-	default="System Default"
-else
-	default="&lt;None&gt;"
-fi
+				<string>[[ $setting == browser ]] &amp;&amp; default="System Default" || default="&lt;None&gt;"
 
 currSelected='
 	"subtitle": "Currently Selected",
@@ -1271,7 +1266,9 @@ Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows
 
 ![Other actions](images/about/inlineSettings.png)
 
-Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/). See a timestamp of the last successful reload from the other actions as shown in the image above.
+Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/).
+
+Favicons are also supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings (this requires at least linkding version 1.31.1).
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
 
@@ -1571,6 +1568,25 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Enable Favicons</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Appearance</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useFavicons</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<true/>
 				<key>required</key>
 				<false/>
@@ -1578,9 +1594,9 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<string>Enable Quick Look</string>
 			</dict>
 			<key>description</key>
-			<string>Tap shift or ⌘Y to preview bookmarks</string>
+			<string>Tap shift or ⌘Y to Quick Look bookmarks</string>
 			<key>label</key>
-			<string>Preview</string>
+			<string></string>
 			<key>type</key>
 			<string>checkbox</string>
 			<key>variable</key>
@@ -1776,7 +1792,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.7.1</string>
+	<string>2024.8</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>

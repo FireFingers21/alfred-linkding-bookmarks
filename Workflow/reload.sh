@@ -1,9 +1,9 @@
 #!/bin/zsh --no-rcs
 
-readonly bookmarks=$(curl -s -X GET "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
+readonly bookmarks=$(curl -s "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
 
 case "${bookmarks}" in
-	"")
+	"" | "error code"*)
 		echo -n "linkding server not found"
 		;;
 	*"Invalid token"*)
@@ -11,11 +11,21 @@ case "${bookmarks}" in
 		;;
 	*)
 		readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
-		readonly last_updated_file="${alfred_workflow_data}/lastUpdated.txt"
+		readonly favicon_folder="${alfred_workflow_data}/favicons"
 
 		mkdir -p "${alfred_workflow_data}"
 		echo -nE "${bookmarks}" > "${bookmarks_file}"
-		echo -n "lastUpdated='$(date +"%A, %B %d %Y at %I:%M%p")'" > "${last_updated_file}"
+
+		if [[ "${useFavicons}" -eq 1 ]]; then
+		    mkdir -p "${favicon_folder}"
+			for url in $(jq -rs '.[].results | map(.favicon_url) | .[]' ${bookmarks_file} | sort | uniq); do
+			    filename=$(basename "$url")
+				curl -s -o "${favicon_folder}/$filename" "$url" &
+				[[ $(jobs | wc -l) -eq 15 ]] && wait
+			done
+			find "${favicon_folder}" -type f -maxdepth 1 ! -newer "${bookmarks_file}" -delete
+		fi
+
 		echo -n "Bookmarks Updated"
 		;;
 esac
