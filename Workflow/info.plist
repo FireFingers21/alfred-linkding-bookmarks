@@ -391,7 +391,7 @@ jq -s \
 		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
 			"uid": .id,
 			"title": (.title // .website_title),
-			"subtitle": "\(.tag_names[0] | if . then "["+.+"] " else "" end)\(.url)",
+			"subtitle": "\(.tag_names | length as $tag_length | if $tag_length != 0 then reduce .[] as $tag_name (""; . += "["+$tag_name+"]") else "" end)\(.url)",
 			"arg": .url,
 			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
