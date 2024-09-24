@@ -1270,7 +1270,7 @@ Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows
 
 ![Other actions](images/about/inlineSettings.png)
 
-Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). Bookmarks will reload upon [Workflow Trigger](https://www.alfredapp.com/help/workflows/triggers/).
+Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 Favicons are also supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings (this requires at least linkding version 1.31.1).
 
