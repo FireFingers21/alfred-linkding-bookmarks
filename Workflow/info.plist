@@ -295,8 +295,6 @@
 				<integer>0</integer>
 				<key>hotmod</key>
 				<integer>0</integer>
-				<key>hotstring</key>
-				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -383,6 +381,7 @@ jq -s \
    --arg useDesc "$useDesc" \
    --arg useURL "$useURL" \
    --arg useTag "$useTag" \
+   --arg showAllTags "$showAllTags" \
    --arg useQL "$useQL" \
    --arg useFavicons "$useFavicons" \
    --arg favicon_folder "$favicon_folder" \
@@ -391,11 +390,11 @@ jq -s \
 		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
 			"uid": .id,
 			"title": (.title // .website_title),
-			"subtitle": "\(.tag_names[0] | if . then "["+.+"] " else "" end)\(.url)",
+			"subtitle": "\(.tag_names | if .[0] then (if $showAllTags == "1" then "["+join(", ")+"] " else "["+.[0]+"] " end) else "" end)\(.url)",
 			"arg": .url,
 			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
-			"text": { "largetype": .url },
+			"text": { "largetype": "[\(.tag_names | join(", "))]\n\n\(.url)" },
 			"icon": {
 				"path": (try (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end) catch "")
 			},
@@ -411,7 +410,7 @@ jq -s \
 				},
 				"alt+shift": {
 					"subtitle": "View in linkding",
-					"arg": "\($baseUrl)/bookmarks/\(.id)/details"
+					"arg": "\($baseUrl)/bookmarks?details=\(.id)"
 				},
 				"ctrl": {
 					"subtitle": "Delete from linkding",
@@ -419,7 +418,8 @@ jq -s \
 					"variables": {
 						"bId": .id,
 						"bTitle": (.title // .website_title),
-						"bUrl": .url
+						"bUrl": .url,
+						"bIcon": (try (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end) catch "")
 					}
 				},
 				"shift": {
@@ -624,6 +624,9 @@ jq -s \
 		"title": "${bTitle}",
 		"subtitle": "${bUrl}",
 		"valid": "false",
+		"icon": {
+			"path": "${bIcon}"
+		},
 		"mods": {
 			"ctrl": {
 				"subtitle": "${bUrl}"
@@ -1260,6 +1263,7 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 * &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding
 * &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View all tags and full URL in Large Type
 * &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
@@ -1587,6 +1591,25 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Show all tags in subtitle</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>showAllTags</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<true/>
 				<key>required</key>
 				<false/>
@@ -1792,7 +1815,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.8</string>
+	<string>2024.9</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>

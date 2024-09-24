@@ -26,6 +26,7 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 * <kbd>⇧</kbd><kbd>⌥</kbd><kbd>↩</kbd> View bookmark in linkding
 * <kbd>⌃</kbd><kbd>↩</kbd> Delete bookmark from linkding
 * <kbd>⌘</kbd><kbd>C</kbd> Copy bookmark URL
+* <kbd>⌘</kbd><kbd>L</kbd> View all tags and full URL in Large Type
 * <kbd>⇧</kbd> Hold to show bookmark description
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
