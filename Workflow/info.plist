@@ -385,13 +385,14 @@ jq -s \
    --arg useTag "$useTag" \
    --arg useQL "$useQL" \
    --arg useFavicons "$useFavicons" \
+   --arg showAllTags "$showAllTags" \
    --arg favicon_folder "$favicon_folder" \
    '{
 	"items": (if (length != 0) and (.[].results | length &gt; 0) then
 		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
 			"uid": .id,
 			"title": (.title // .website_title),
-			"subtitle": "\(.tag_names | length as $tag_length | if $tag_length != 0 then reduce .[] as $tag_name (""; . += "["+$tag_name+"]") else "" end)\(.url)",
+			"subtitle": "\(if $showAllTags == "1" then .tag_names | length as $tag_length | if $tag_length != 0 then reduce .[] as $tag_name (""; . += "["+$tag_name+"]") else "" end else .tag_names[0] | if . then "["+.+"] " else "" end end)\(.url)",
 			"arg": .url,
 			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
@@ -1582,6 +1583,25 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>useFavicons</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Enable Show All Tags</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>showAllTags</string>
 		</dict>
 		<dict>
 			<key>config</key>
