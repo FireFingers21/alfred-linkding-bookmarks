@@ -77,6 +77,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>7D8915D1-C0D4-40C2-BA9B-02E1B0BADE3F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>44257FFC-200D-4323-8F39-A91B0B3E4DDC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</key>
 		<array>
 			<dict>
@@ -129,6 +142,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>7D8915D1-C0D4-40C2-BA9B-02E1B0BADE3F</string>
+				<key>modifiers</key>
+				<integer>1179648</integer>
+				<key>modifiersubtext</key>
+				<string>Open in primary browser without closing Alfred</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>6BA68A5D-9EC1-4671-AA5E-99189608FF42</string>
 				<key>modifiers</key>
 				<integer>262144</integer>
@@ -142,7 +165,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</string>
+				<string>2EADA50E-6625-4793-9F13-EBF6C65744BC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -283,35 +306,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string></string>
-				<key>hotkey</key>
-				<integer>0</integer>
-				<key>hotmod</key>
-				<integer>0</integer>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-				<key>relatedAppsMode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>1548B684-9B57-4C83-889B-7AB17368732A</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -337,138 +331,6 @@ fi</string>
 			<string>FB471DC1-D3ED-428D-A744-5208E260352F</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>{var:linkding_keyword}</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>Loading...</string>
-				<key>script</key>
-				<string>readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
-readonly favicon_folder="${alfred_workflow_data}/favicons"
-
-# Auto Update
-[[ -f "${bookmarks_file}" ]] &amp;&amp; [[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" &amp;&amp; "${autoUpdate}" -ne 0 ]] &amp;&amp; reload=$(./reload.sh)
-
-# Favicon Check
-[[ "${useFavicons}" -eq 1 ]] &amp;&amp; [[ ! -d "${favicon_folder}" ]] &amp;&amp; reload=$(./reload.sh)
-
-# Load Bookmarks
-jq -s \
-   --arg baseUrl "$baseUrl" \
-   --arg useDesc "$useDesc" \
-   --arg useURL "$useURL" \
-   --arg useTag "$useTag" \
-   --arg showAllTags "$showAllTags" \
-   --arg useQL "$useQL" \
-   --arg useFavicons "$useFavicons" \
-   --arg favicon_folder "$favicon_folder" \
-   '{
-	"items": (if (length != 0) and (.[].results | length &gt; 0) then
-		.[].results | walk(if . == "" then null end) | map((if .tag_names | contains("Exclude-Alfred" | split("")) then empty else {
-			"uid": .id,
-			"title": (.title // .website_title),
-			"subtitle": "\(.tag_names | if .[0] then (if $showAllTags == "1" then "["+join(", ")+"] " else "["+.[0]+"] " end) else "" end)\(.url)",
-			"arg": .url,
-			"match": "\(.title // .website_title) \(if $useDesc == "1" then ((.description // .website_description) // "") else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
-			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
-			"text": { "largetype": "[\(.tag_names | join(", "))]\n\n\(.url)" },
-			"icon": {
-				"path": (try (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end) catch "")
-			},
-			"mods": {
-				"cmd": {
-					"subtitle": "Open in secondary browser",
-					"arg": .url,
-					"variables": { "bSecondary": true }
-				},
-				"alt": {
-					"subtitle": "Edit in linkding",
-					"arg": "\($baseUrl)/bookmarks/\(.id)/edit"
-				},
-				"alt+shift": {
-					"subtitle": "View in linkding",
-					"arg": "\($baseUrl)/bookmarks?details=\(.id)"
-				},
-				"ctrl": {
-					"subtitle": "Delete from linkding",
-					"arg": "",
-					"variables": {
-						"bId": .id,
-						"bTitle": (.title // .website_title),
-						"bUrl": .url,
-						"bIcon": (try (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end) catch "")
-					}
-				},
-				"shift": {
-					"subtitle": ((.description // .website_description) // "")
-				}
-			}
-		}end))
-	elif length == 0 then
-		[{
-			"title": "No Bookmarks Found",
-			"subtitle": "Press ↩ to load bookmarks",
-			"arg": "reload"
-		}]
-	else
-		[{
-			"title": "Search Bookmarks...",
-			"subtitle": "You have no bookmarks",
-			"valid": "false"
-		}]
-	end)
-}' "${bookmarks_file}"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string>{const:alfred_workflow_description}</string>
-				<key>title</key>
-				<string>Search Bookmarks...</string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>inboundconfig</key>
-			<dict>
-				<key>externalid</key>
-				<string>main</string>
-				<key>inputmode</key>
-				<integer>1</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -509,6 +371,86 @@ jq -s \
 			<string>E0288F3D-AC0D-4DC6-960A-99AA91162D20</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>0</integer>
+				<key>hotmod</key>
+				<integer>0</integer>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>1548B684-9B57-4C83-889B-7AB17368732A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:linkding_keyword}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading...</string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>search.sh</string>
+				<key>skipuniversalaction</key>
+				<true/>
+				<key>subtext</key>
+				<string>{const:alfred_workflow_description}</string>
+				<key>title</key>
+				<string>Search Bookmarks...</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -568,6 +510,14 @@ jq -s \
 			<string>44257FFC-200D-4323-8F39-A91B0B3E4DDC</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.junction</string>
+			<key>uid</key>
+			<string>7D8915D1-C0D4-40C2-BA9B-02E1B0BADE3F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -769,19 +719,15 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>externaltriggerid</key>
-				<string>main</string>
-				<key>passinputasargument</key>
+				<key>argument</key>
+				<string>{var:linkding_keyword} </string>
+				<key>leftcursor</key>
 				<false/>
-				<key>passvariables</key>
-				<false/>
-				<key>workflowbundleid</key>
-				<string>self</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.utility.showalfred</string>
 			<key>uid</key>
-			<string>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</string>
+			<string>2EADA50E-6625-4793-9F13-EBF6C65744BC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -919,54 +865,11 @@ EOB</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string># Get lastest cache timestamp
-readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
-readonly lastUpdated=$(date -r "${bookmarks_file}" +"%A, %B %d %Y at %I:%M%p" || printf "Never")
-
-cat &lt;&lt; EOB
-{"items": [
-	{
-		"title": "Reload Bookmarks",
-		"subtitle": "Last Updated: ${lastUpdated}",
-		"variables": { "pref_id": "reload" }
-	},
-	{
-		"title": "New Bookmark",
-		"variables": { "pref_id": "new" },
-		"mods": {
-			"cmd": {
-				"subtitle": "Open in secondary browser",
-				"variables": {
-					"bSecondary": true,
-					"pref_id": "new"
-				}
-			}
-		}
-	},
-	{
-		"title": "Open linkding",
-		"variables": { "pref_id": "open" },
-		"mods": {
-			"cmd": {
-				"subtitle": "Open in secondary browser",
-				"variables": {
-					"bSecondary": true,
-					"pref_id": "open"
-				}
-			}
-		}
-	},
-	{
-		"title": "Browser Settings",
-		"subtitle": "Select the default browsers for ${alfred_workflow_name}",
-		"variables": { "pref_id": "browser" }
-	},
-]}
-EOB</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>configuration.sh</string>
 				<key>skipuniversalaction</key>
 				<true/>
 				<key>subtext</key>
@@ -974,7 +877,7 @@ EOB</string>
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>11</integer>
+				<integer>8</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -1113,14 +1016,9 @@ cat &lt;&lt; EOB
 		$([[ -z ${(P)setting} ]] &amp;&amp; echo $currSelected)
 	},
 	{
-		"title": "Safari",
-		"arg": "com.apple.Safari",
-		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Google Chrome",
-		"arg": "com.google.Chrome",
-		$([[ ${(P)setting} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
+		"title": "Arc",
+		"arg": "company.thebrowser.Browser",
+		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Firefox",
@@ -1128,14 +1026,19 @@ cat &lt;&lt; EOB
 		$([[ ${(P)setting} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
 	},
 	{
+		"title": "Google Chrome",
+		"arg": "com.google.Chrome",
+		$([[ ${(P)setting} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
+	},
+	{
 		"title": "Microsoft Edge",
 		"arg": "com.microsoft.edgemac",
 		$([[ ${(P)setting} == "com.microsoft.edgemac" ]] &amp;&amp; echo $currSelected)
 	},
 	{
-		"title": "Arc",
-		"arg": "company.thebrowser.Browser",
-		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
+		"title": "Opera",
+		"arg": "com.operasoftware.Opera",
+		$([[ ${(P)setting} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
 	},
 	{
 		"title": "Orion",
@@ -1143,9 +1046,9 @@ cat &lt;&lt; EOB
 		$([[ ${(P)setting} == "com.kagi.kagimacOS" ]] &amp;&amp; echo $currSelected)
 	},
 	{
-		"title": "Opera",
-		"arg": "com.operasoftware.Opera",
-		$([[ ${(P)setting} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
+		"title": "Safari",
+		"arg": "com.apple.Safari",
+		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
 	}
 ]}
 EOB</string>
@@ -1245,7 +1148,7 @@ EOB</string>
 
 Set the Base URL and API Token of your [linkding](https://github.com/sissbruecker/linkding) installation in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). You can find the API Token from your linkding Settings → Integrations → Rest API.
 
-**Note**: This workflow requires [jq](https://jqlang.github.io/jq/) to function.
+**Note**: This workflow requires [jq](https://jqlang.github.io/jq/) to function, which now comes preinstalled on macOS Sequoia 15.0.0 and later.
 
 ## Usage
 
@@ -1253,11 +1156,12 @@ Search for your [linkding](https://github.com/sissbruecker/linkding) bookmarks u
 
 ![Searching for linkding bookmarks](images/about/keyword.png)
 
-Type to refine your search. Bookmarks are always filtered by title, while filtering by description, URL, and tags is configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are [configurable](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 ![Narrowing search for linkding bookmarks](images/about/tagFilter.png)
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in primary browser without closing Alfred (when browser is in focus)
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
 * &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding
@@ -1266,13 +1170,13 @@ Type to refine your search. Bookmarks are always filtered by title, while filter
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View all tags and full URL in Large Type
 * &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
 
-Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also change the default browser settings from here without using the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also directly change the Workflow's default browser settings from here.
 
 ![Other actions](images/about/inlineSettings.png)
 
-Enable bookmark auto-updates from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+Bookmark auto-updating is supported and [configurable](https://www.alfredapp.com/help/workflows/user-configuration/).
 
-Favicons are also supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings (this requires at least linkding version 1.31.1).
+Favicons are also supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings.
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
 
@@ -1288,7 +1192,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>30</real>
 		</dict>
 		<key>1AF3C198-953E-4B33-B2AA-1FDFCACF4F79</key>
 		<dict>
@@ -1298,6 +1202,13 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<real>630</real>
 			<key>ypos</key>
 			<real>250</real>
+		</dict>
+		<key>2EADA50E-6625-4793-9F13-EBF6C65744BC</key>
+		<dict>
+			<key>xpos</key>
+			<real>670</real>
+			<key>ypos</key>
+			<real>430</real>
 		</dict>
 		<key>3B41798A-C85B-4FF8-9251-D1FED8C63E7E</key>
 		<dict>
@@ -1368,6 +1279,15 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>ypos</key>
 			<real>550</real>
 		</dict>
+		<key>7D8915D1-C0D4-40C2-BA9B-02E1B0BADE3F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>xpos</key>
+			<real>355</real>
+			<key>ypos</key>
+			<real>150</real>
+		</dict>
 		<key>7E57B24D-1A6A-4FEA-AAE0-370621640FDB</key>
 		<dict>
 			<key>colorindex</key>
@@ -1375,7 +1295,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>xpos</key>
 			<real>345</real>
 			<key>ypos</key>
-			<real>35</real>
+			<real>50</real>
 		</dict>
 		<key>83517451-8657-4071-A9D9-BCE60E3988A2</key>
 		<dict>
@@ -1395,7 +1315,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>15</real>
+			<real>30</real>
 		</dict>
 		<key>D25BD092-B3A8-46D8-8B64-70A2EA0A54CF</key>
 		<dict>
@@ -1437,13 +1357,6 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<string>Notify if successful</string>
 			<key>xpos</key>
 			<real>450</real>
-			<key>ypos</key>
-			<real>400</real>
-		</dict>
-		<key>E6183FB6-0083-4BC3-AC34-C62CE35D24D9</key>
-		<dict>
-			<key>xpos</key>
-			<real>630</real>
 			<key>ypos</key>
 			<real>400</real>
 		</dict>
@@ -1529,6 +1442,25 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>useDesc</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search by Notes</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>useNotes</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1637,32 +1569,32 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 						<string></string>
 					</array>
 					<array>
-						<string>Safari</string>
-						<string>com.apple.Safari</string>
-					</array>
-					<array>
-						<string>Google Chrome</string>
-						<string>com.google.Chrome</string>
+						<string>Arc</string>
+						<string>company.thebrowser.Browser</string>
 					</array>
 					<array>
 						<string>Firefox</string>
 						<string>org.mozilla.firefox</string>
 					</array>
 					<array>
+						<string>Google Chrome</string>
+						<string>com.google.Chrome</string>
+					</array>
+					<array>
 						<string>Microsoft Edge</string>
 						<string>com.microsoft.edgemac</string>
 					</array>
 					<array>
-						<string>Arc</string>
-						<string>company.thebrowser.Browser</string>
+						<string>Opera</string>
+						<string>com.operasoftware.Opera</string>
 					</array>
 					<array>
 						<string>Orion</string>
 						<string>com.kagi.kagimacOS</string>
 					</array>
 					<array>
-						<string>Opera</string>
-						<string>com.operasoftware.Opera</string>
+						<string>Safari</string>
+						<string>com.apple.Safari</string>
 					</array>
 				</array>
 			</dict>
@@ -1687,32 +1619,32 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 						<string></string>
 					</array>
 					<array>
-						<string>Safari</string>
-						<string>com.apple.Safari</string>
-					</array>
-					<array>
-						<string>Google Chrome</string>
-						<string>com.google.Chrome</string>
+						<string>Arc</string>
+						<string>company.thebrowser.Browser</string>
 					</array>
 					<array>
 						<string>Firefox</string>
 						<string>org.mozilla.firefox</string>
 					</array>
 					<array>
+						<string>Google Chrome</string>
+						<string>com.google.Chrome</string>
+					</array>
+					<array>
 						<string>Microsoft Edge</string>
 						<string>com.microsoft.edgemac</string>
 					</array>
 					<array>
-						<string>Arc</string>
-						<string>company.thebrowser.Browser</string>
+						<string>Opera</string>
+						<string>com.operasoftware.Opera</string>
 					</array>
 					<array>
 						<string>Orion</string>
 						<string>com.kagi.kagimacOS</string>
 					</array>
 					<array>
-						<string>Opera</string>
-						<string>com.operasoftware.Opera</string>
+						<string>Safari</string>
+						<string>com.apple.Safari</string>
 					</array>
 				</array>
 			</dict>
@@ -1815,7 +1747,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2024.9</string>
+	<string>2025.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>
