@@ -1021,6 +1021,11 @@ cat &lt;&lt; EOB
 		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
 	},
 	{
+		"title": "Chromium",
+		"arg": "org.chromium.Chromium",
+		$([[ ${(P)setting} == "org.chromium.Chromium" ]] &amp;&amp; echo $currSelected)
+	},
+	{
 		"title": "Firefox",
 		"arg": "org.mozilla.firefox",
 		$([[ ${(P)setting} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
@@ -1049,6 +1054,11 @@ cat &lt;&lt; EOB
 		"title": "Safari",
 		"arg": "com.apple.Safari",
 		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
+	},
+	{
+		"title": "Zen",
+		"arg": "app.zen-browser.zen",
+		$([[ ${(P)setting} == "app.zen-browser.zen" ]] &amp;&amp; echo $currSelected)
 	}
 ]}
 EOB</string>
@@ -1573,6 +1583,10 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 						<string>company.thebrowser.Browser</string>
 					</array>
 					<array>
+						<string>Chromium</string>
+						<string>org.chromium.Chromium</string>
+					</array>
+					<array>
 						<string>Firefox</string>
 						<string>org.mozilla.firefox</string>
 					</array>
@@ -1595,6 +1609,10 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 					<array>
 						<string>Safari</string>
 						<string>com.apple.Safari</string>
+					</array>
+					<array>
+						<string>Zen</string>
+						<string>app.zen-browser.zen</string>
 					</array>
 				</array>
 			</dict>
@@ -1623,6 +1641,10 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 						<string>company.thebrowser.Browser</string>
 					</array>
 					<array>
+						<string>Chromium</string>
+						<string>org.chromium.Chromium</string>
+					</array>
+					<array>
 						<string>Firefox</string>
 						<string>org.mozilla.firefox</string>
 					</array>
@@ -1645,6 +1667,10 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 					<array>
 						<string>Safari</string>
 						<string>com.apple.Safari</string>
+					</array>
+					<array>
+						<string>Zen</string>
+						<string>app.zen-browser.zen</string>
 					</array>
 				</array>
 			</dict>
