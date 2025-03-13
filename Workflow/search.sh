@@ -7,7 +7,7 @@ readonly favicon_folder="${alfred_workflow_data}/favicons"
 [[ -f "${bookmarks_file}" ]] && [[ "$(date -r "${bookmarks_file}" +%s)" -lt "$(date -v -"${autoUpdate}"H +%s)" && "${autoUpdate}" -ne 0 ]] && reload=$(./reload.sh)
 
 # Favicon Check
-[[ "${useFavicons}" -eq 1 ]] && [[ ! -d "${favicon_folder}" ]] && reload=$(./reload.sh)
+[[ "${useFavicons}" -eq 1 ]] && [[ -f "${bookmarks_file}" ]] && [[ ! -d "${favicon_folder}" ]] && reload=$(./reload.sh)
 
 # Load Bookmarks
 jq -cs \
