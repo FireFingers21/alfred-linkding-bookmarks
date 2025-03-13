@@ -4,26 +4,14 @@
 readonly bookmarks_file="${alfred_workflow_data}/bookmarks.json"
 readonly favicons_file="${alfred_workflow_data}/favicons"
 
-[[ ${useFavicons} -eq 1 ]] && [[ "$(date -r ${bookmarks_file} +%s)" -gt "$(date -r ${favicons_file} +%s)" ]] && partial=" (Partial)"
-
 readonly lastUpdated=$(date -r "${bookmarks_file}" +"%A, %B %d %Y at %I:%M%p" || printf "Never")
-readonly reloadNoIcon='"mods": {
-			"cmd": {
-				"subtitle": "Partial reload without Favicons",
-				"variables": {
-					"useFavicons": false,
-					"pref_id": "reload"
-				}
-			}
-		}'
 
 cat << EOB
 {"items": [
 	{
 		"title": "Reload Bookmarks",
-		"subtitle": "Last Update${partial}: ${lastUpdated}",
-		"variables": { "pref_id": "reload" },
-		$([[ ${useFavicons} -eq 1 ]] && echo $reloadNoIcon)
+		"subtitle": "Last Update: ${lastUpdated}",
+		"variables": { "pref_id": "reload" }
 	},
 	{
 		"title": "New Bookmark",
