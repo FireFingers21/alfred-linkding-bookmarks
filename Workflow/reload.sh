@@ -14,9 +14,11 @@ case "${bookmarks}" in
 		readonly favicon_folder="${alfred_workflow_data}/favicons"
 
 		mkdir -p "${alfred_workflow_data}"
+		readonly oldBookmarks=$(shasum -a 256 ${bookmarks_file} | awk '{print $1}')
 		echo -nE "${bookmarks}" > "${bookmarks_file}"
+		readonly newBookmarks=$(shasum -a 256 ${bookmarks_file} | awk '{print $1}')
 
-		if [[ "${useFavicons}" -eq 1 ]]; then
+		if [[ "${useFavicons}" -eq 1 && "${oldBookmarks}" != "${newBookmarks}" ]]; then
 		    mkdir -p "${favicon_folder}"
 			for url in $(jq -rs '.[].results | map(.favicon_url) | .[]' ${bookmarks_file} | sort | uniq); do
 			    filename=$(basename "$url")
