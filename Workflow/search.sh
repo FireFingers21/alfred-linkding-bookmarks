@@ -31,7 +31,7 @@ jq -cs \
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
 			"text": { "largetype": "[\(.tag_names | join(", "))]\n\n\(.url)" },
 			"icon": {
-				"path": (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end)
+				"path": (if ($useFavicons == "1" and .favicon_url) then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end)
 			},
 			"mods": {
 				"cmd": {
@@ -53,7 +53,7 @@ jq -cs \
 						"bId": .id,
 						"bTitle": .title,
 						"bUrl": .url,
-						"bIcon": (if $useFavicons == "1" then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end)
+						"bIcon": (if ($useFavicons == "1" and .favicon_url) then "\($favicon_folder)/\(.favicon_url | split("/") | .[-1])" else "" end)
 					}
 				},
 				"shift": {
