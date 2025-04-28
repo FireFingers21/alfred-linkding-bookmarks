@@ -146,7 +146,7 @@
 				<key>modifiers</key>
 				<integer>1179648</integer>
 				<key>modifiersubtext</key>
-				<string>Open in primary browser without closing Alfred</string>
+				<string>⇧⌘↩ Open in primary browser without closing Alfred</string>
 				<key>vitoclose</key>
 				<true/>
 			</dict>

@@ -35,19 +35,19 @@ jq -cs \
 			},
 			"mods": {
 				"cmd": {
-					"subtitle": "Open in secondary browser",
+					"subtitle": "⌘↩ Open in secondary browser",
 					"variables": { "bSecondary": true }
 				},
 				"alt": {
-					"subtitle": "Edit in linkding",
+					"subtitle": "⌥↩ Edit in linkding",
 					"arg": "\($baseUrl)/bookmarks/\(.id)/edit"
 				},
 				"alt+shift": {
-					"subtitle": "View in linkding",
+					"subtitle": "⇧⌥↩ View in linkding",
 					"arg": "\($baseUrl)/bookmarks?details=\(.id)"
 				},
 				"ctrl": {
-					"subtitle": "Delete from linkding",
+					"subtitle": "⌃↩ Delete from linkding",
 					"arg": "",
 					"variables": {
 						"bId": .id,
