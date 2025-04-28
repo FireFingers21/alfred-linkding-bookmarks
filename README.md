@@ -16,7 +16,7 @@ Search for your [linkding](https://github.com/sissbruecker/linkding) bookmarks u
 
 ![Searching for linkding bookmarks](Workflow/images/about/keyword.png)
 
-Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are [configurable](https://www.alfredapp.com/help/workflows/user-configuration/).
+Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 ![Narrowing search for linkding bookmarks](Workflow/images/about/tagFilter.png)
 
