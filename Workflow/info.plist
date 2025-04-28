@@ -5,7 +5,7 @@
 	<key>bundleid</key>
 	<string>com.firefingers21.linkdingbookmarks</string>
 	<key>category</key>
-	<string>Internet</string>
+	<string>Shared</string>
 	<key>connections</key>
 	<dict>
 		<key>1548B684-9B57-4C83-889B-7AB17368732A</key>
@@ -1166,7 +1166,7 @@ Search for your [linkding](https://github.com/sissbruecker/linkding) bookmarks u
 
 ![Searching for linkding bookmarks](images/about/keyword.png)
 
-Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are [configurable](https://www.alfredapp.com/help/workflows/user-configuration/).
+Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 ![Narrowing search for linkding bookmarks](images/about/tagFilter.png)
 

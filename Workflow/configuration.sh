@@ -10,7 +10,7 @@ cat << EOB
 {"items": [
 	{
 		"title": "Reload Bookmarks",
-		"subtitle": "Last Update: ${lastUpdated}",
+		"subtitle": "Last Updated: ${lastUpdated}",
 		"variables": { "pref_id": "reload" }
 	},
 	{
