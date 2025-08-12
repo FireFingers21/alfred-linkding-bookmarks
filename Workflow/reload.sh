@@ -1,7 +1,7 @@
 #!/bin/zsh --no-rcs
 
-readonly bookmarks=$(curl -s -w "\n%{http_code}" "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
-http_code=$(tail -n 1 <<< "${bookmarks}")
+readonly bookmarks=$(curl -s --compressed -w "\n%{http_code}" "${baseUrl}/api/bookmarks/?limit=${limit}" -H "Authorization: Token ${token}")
+readonly http_code="${bookmarks##*$'\n'}"
 
 case "${http_code}" in
 	200)
