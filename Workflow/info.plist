@@ -4,8 +4,6 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.firefingers21.linkdingbookmarks</string>
-	<key>category</key>
-	<string>Shared</string>
 	<key>connections</key>
 	<dict>
 		<key>1548B684-9B57-4C83-889B-7AB17368732A</key>
@@ -1773,7 +1771,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2025.4</string>
+	<string>2025.8</string>
 	<key>webaddress</key>
 	<string>https://github.com/FireFingers21/alfred-linkding-bookmarks</string>
 </dict>
