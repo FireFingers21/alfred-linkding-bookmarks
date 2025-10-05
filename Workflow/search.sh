@@ -27,7 +27,13 @@ jq -cs \
 			"title": .title,
 			"subtitle": "\(.tag_names | if .[0] then (if $showAllTags == "1" then "["+join(", ")+"] " else "["+.[0]+"] " end) else "" end)\(.url)",
 			"arg": .url,
-			"match": "\(.title) \(if $useDesc == "1" then .description else "" end) \(if $useNotes == "1" then .notes else "" end) \(.tag_names | map(select($useTag == "1") | "#" + .)) \(if $useURL == "1" then .url else "" end)",
+			"match": [
+                .title,
+                (if $useDesc == "1" then .description else empty end),
+                (if $useNotes == "1" then .notes else empty end),
+                (if $useURL == "1" then .url else empty end),
+                (if $useTag == "1" then (.tag_names[] | "#" + .) else empty end)
+            ] | map(select(.)) | join(" "),
 			"quicklookurl": "\(if $useQL == "1" then .url else "" end)",
 			"text": { "largetype": "[\(.tag_names | join(", "))]\n\n\(.url)" },
 			"icon": {
