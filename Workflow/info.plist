@@ -245,7 +245,7 @@
 	<key>createdby</key>
 	<string>FireFingers21</string>
 	<key>description</key>
-	<string>Search linkding bookmarks in Alfred</string>
+	<string>Search linkding bookmarks</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -523,9 +523,7 @@ fi</string>
 		"title": "${bTitle}",
 		"subtitle": "${bUrl}",
 		"valid": "false",
-		"icon": {
-			"path": "${bIcon}"
-		},
+		"icon": { "path": "${bIcon}" },
 		"mods": {
 			"ctrl": {
 				"subtitle": "${bUrl}"
@@ -879,39 +877,36 @@ end run</string>
 	<key>readme</key>
 	<string>## Setup
 
-Set the Base URL and API Token of your [linkding](https://github.com/sissbruecker/linkding) installation in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). You can find the API Token from your linkding Settings → Integrations → Rest API.
+Set the Base URL and API Token of your [linkding](https://linkding.link/) installation in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/). You can find the API Token from your linkding Settings → Integrations → Rest API.
 
-**Note**: This workflow requires [jq](https://jqlang.github.io/jq/) to function, which now comes preinstalled on macOS Sequoia 15.0.0 and later.
+**Note**: This workflow requires [jq](https://jqlang.github.io/jq/) to function, which comes preinstalled on macOS 15 Sequoia and later.
 
 ## Usage
 
-Search for your [linkding](https://github.com/sissbruecker/linkding) bookmarks using the `bm` keyword.
+Search for your [linkding](https://linkding.link/) bookmarks using the `bm` keyword. Type to refine your search.
 
 ![Searching for linkding bookmarks](images/about/keyword.png)
 
-Type to refine your search. Bookmarks are always filtered by title, while filtering by description, notes, URL, and tags are configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
+Bookmarks are always searchable by title, while filtering by Description, Notes, URL, and Tag is configurable from the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
 
 ![Narrowing search for linkding bookmarks](images/about/tagFilter.png)
 
 * &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser
-* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in primary browser without closing Alfred (when browser is in focus)
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in primary browser without closing Alfred
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser
 * &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
 * &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding
 * &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;C&lt;/kbd&gt; Copy bookmark URL
 * &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View all tags and full URL in Large Type
 * &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
 
-Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, including manually reloading the bookmark cache. You can also directly change the Workflow's default browser settings from here.
+Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, such as manually reloading the bookmark cache.
 
 ![Other actions](images/about/inlineSettings.png)
 
-Bookmark auto-updating is supported and [configurable](https://www.alfredapp.com/help/workflows/user-configuration/).
+Favicons are supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings.
 
-Favicons are also supported, and must be enabled in both the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/) and your linkding settings.
-
-Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut to search for your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
+Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut for searching your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
 
 ![Using the Universal Action](images/about/universalAction.png)
 
@@ -952,15 +947,6 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>ypos</key>
 			<real>280</real>
 		</dict>
-		<key>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>720</real>
-			<key>ypos</key>
-			<real>655</real>
-		</dict>
 		<key>44257FFC-200D-4323-8F39-A91B0B3E4DDC</key>
 		<dict>
 			<key>colorindex</key>
@@ -999,7 +985,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>colorindex</key>
 			<integer>11</integer>
 			<key>xpos</key>
-			<real>585</real>
+			<real>315</real>
 			<key>ypos</key>
 			<real>655</real>
 		</dict>
@@ -1030,15 +1016,6 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
-		<key>83517451-8657-4071-A9D9-BCE60E3988A2</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>315</real>
-			<key>ypos</key>
-			<real>655</real>
-		</dict>
 		<key>D0EB740F-5590-4BEA-AD30-5FC6944D1D8F</key>
 		<dict>
 			<key>colorindex</key>
@@ -1057,15 +1034,6 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>ypos</key>
 			<real>430</real>
 		</dict>
-		<key>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</key>
-		<dict>
-			<key>colorindex</key>
-			<integer>11</integer>
-			<key>xpos</key>
-			<real>450</real>
-			<key>ypos</key>
-			<real>655</real>
-		</dict>
 		<key>E0288F3D-AC0D-4DC6-960A-99AA91162D20</key>
 		<dict>
 			<key>colorindex</key>
@@ -1082,7 +1050,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>540</real>
+			<real>555</real>
 		</dict>
 		<key>E3A362CE-3843-450A-9BC5-F15703CAD8CC</key>
 		<dict>
@@ -1225,7 +1193,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<string>Search by Tag</string>
 			</dict>
 			<key>description</key>
-			<string>Prefixing words with # filters by tag</string>
+			<string>Prefixing words with # filters by Tag</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -1410,7 +1378,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 			<key>config</key>
 			<dict>
 				<key>defaultvalue</key>
-				<integer>0</integer>
+				<integer>24</integer>
 				<key>markercount</key>
 				<integer>13</integer>
 				<key>maxvalue</key>
@@ -1437,7 +1405,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<key>default</key>
 				<string></string>
 				<key>placeholder</key>
-				<string>https://linkding.mydomain.com</string>
+				<string>https://linkding.mydomain.tld</string>
 				<key>required</key>
 				<true/>
 				<key>trim</key>
