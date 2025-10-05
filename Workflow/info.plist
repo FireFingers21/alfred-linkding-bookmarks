@@ -63,18 +63,7 @@
 			</dict>
 		</array>
 		<key>74C96E5F-4974-4901-B09D-1B0E8CE147E8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>7D8915D1-C0D4-40C2-BA9B-02E1B0BADE3F</key>
 		<array>
 			<dict>
@@ -105,19 +94,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>44257FFC-200D-4323-8F39-A91B0B3E4DDC</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>83517451-8657-4071-A9D9-BCE60E3988A2</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -174,19 +150,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>74C96E5F-4974-4901-B09D-1B0E8CE147E8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</key>
 		<array>
 			<dict>
@@ -209,25 +172,13 @@
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>sourceoutputuid</key>
-				<string>A01FA181-2935-44F9-BB3A-23A15A3B036A</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>77E0F242-EF4F-49EE-B767-B55851F84C6F</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>sourceoutputuid</key>
 				<string>F000AA1F-B514-44F9-9998-05E2CF51534F</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>83517451-8657-4071-A9D9-BCE60E3988A2</string>
+				<string>74C96E5F-4974-4901-B09D-1B0E8CE147E8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -764,84 +715,10 @@ EOB</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>conditions</key>
-				<array>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:pref_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>reload</string>
-						<key>outputlabel</key>
-						<string>reload</string>
-						<key>uid</key>
-						<string>8BF92979-3E8C-43C7-90B6-C5201DF0C6BC</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:pref_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>new</string>
-						<key>outputlabel</key>
-						<string>new</string>
-						<key>uid</key>
-						<string>A01FA181-2935-44F9-BB3A-23A15A3B036A</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:pref_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>open</string>
-						<key>outputlabel</key>
-						<string>open</string>
-						<key>uid</key>
-						<string>F000AA1F-B514-44F9-9998-05E2CF51534F</string>
-					</dict>
-					<dict>
-						<key>inputstring</key>
-						<string>{var:pref_id}</string>
-						<key>matchcasesensitive</key>
-						<false/>
-						<key>matchmode</key>
-						<integer>0</integer>
-						<key>matchstring</key>
-						<string>browser</string>
-						<key>outputlabel</key>
-						<string>browser</string>
-						<key>uid</key>
-						<string>56D023CC-6B52-48FC-9ED5-65F35520269C</string>
-					</dict>
-				</array>
-				<key>elselabel</key>
-				<string>Browser</string>
-				<key>hideelse</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.conditional</string>
-			<key>uid</key>
-			<string>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>argumenttreatemptyqueryasnil</key>
 				<true/>
 				<key>argumenttrimmode</key>
@@ -894,21 +771,11 @@ EOB</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string># Select URL
-case "${pref_id}" in
-	"open")
-		url="${baseUrl}/bookmarks"
-		;;
-	"new")
-		url="${baseUrl}/bookmarks/new"
-		;;
-esac
-
-# Secondary browser selection
+				<string># Secondary browser selection
 [[ "${bSecondary}" &amp;&amp; -n "${browser2}" ]] &amp;&amp; browser="${browser2}"
 
 # Primary browser selection
-[[ -z "${browser}" ]] &amp;&amp; open "${url}" || open -b "${browser}" "${url}"</string>
+[[ -z "${browser}" ]] &amp;&amp; open "${baseUrl}/bookmarks" || open -b "${browser}" "${baseUrl}/bookmarks"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -926,16 +793,73 @@ esac
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>reload</string>
+						<key>outputlabel</key>
+						<string>reload</string>
+						<key>uid</key>
+						<string>8BF92979-3E8C-43C7-90B6-C5201DF0C6BC</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>open</string>
+						<key>outputlabel</key>
+						<string>open</string>
+						<key>uid</key>
+						<string>F000AA1F-B514-44F9-9998-05E2CF51534F</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:pref_id}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>configure</string>
+						<key>outputlabel</key>
+						<string>configure</string>
+						<key>uid</key>
+						<string>56D023CC-6B52-48FC-9ED5-65F35520269C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>Browser</string>
+				<key>hideelse</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>E1B365EF-BB47-41C8-B305-4FF9CE4F434B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>68</integer>
 				<key>script</key>
 				<string>on run argv
-	tell application id "com.runningwithcrayons.Alfred"
-		set bundleID to (system attribute "alfred_workflow_bundleid")
-		set configuration (system attribute "setting") to value argv in workflow bundleID
-	end tell
+	tell application id "com.runningwithcrayons.Alfred" to reveal workflow (system attribute "alfred_workflow_bundleid") with configuration
 end run</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -950,205 +874,6 @@ end run</string>
 			<string>74C96E5F-4974-4901-B09D-1B0E8CE147E8</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{var:notifier}</string>
-				<key>title</key>
-				<string>{const:alfred_workflow_name}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>3BDFD6FD-AF87-4AEA-A15E-0AF5BEE62396</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>[[ $setting == browser ]] &amp;&amp; default="System Default" || default="&lt;None&gt;"
-
-currSelected='
-	"subtitle": "Currently Selected",
-	"match": "",
-	"valid": "false"
-'
-
-cat &lt;&lt; EOB
-{"items": [
-	{
-		"title": "$default",
-		"arg": "",
-		$([[ -z ${(P)setting} ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Arc",
-		"arg": "company.thebrowser.Browser",
-		$([[ ${(P)setting} == "company.thebrowser.Browser" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Chromium",
-		"arg": "org.chromium.Chromium",
-		$([[ ${(P)setting} == "org.chromium.Chromium" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Firefox",
-		"arg": "org.mozilla.firefox",
-		$([[ ${(P)setting} == "org.mozilla.firefox" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Google Chrome",
-		"arg": "com.google.Chrome",
-		$([[ ${(P)setting} == "com.google.Chrome" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Microsoft Edge",
-		"arg": "com.microsoft.edgemac",
-		$([[ ${(P)setting} == "com.microsoft.edgemac" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Opera",
-		"arg": "com.operasoftware.Opera",
-		$([[ ${(P)setting} == "com.operasoftware.Opera" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Orion",
-		"arg": "com.kagi.kagimacOS",
-		$([[ ${(P)setting} == "com.kagi.kagimacOS" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Safari",
-		"arg": "com.apple.Safari",
-		$([[ ${(P)setting} == "com.apple.Safari" ]] &amp;&amp; echo $currSelected)
-	},
-	{
-		"title": "Zen",
-		"arg": "app.zen-browser.zen",
-		$([[ ${(P)setting} == "app.zen-browser.zen" ]] &amp;&amp; echo $currSelected)
-	}
-]}
-EOB</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Select Browser</string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E007DCBD-DBEA-4257-8AFE-2CDEA15E19BD</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>cat &lt;&lt; EOB
-{"items": [
-	{
-		"title": "Primary Browser",
-		"subtitle": "Change the primary browser for opening bookmarks",
-		"variables": {
-			"setting": "browser",
-			"notifier": "Primary browser changed"
-		}
-	},
-	{
-		"title": "Secondary Browser",
-		"subtitle": "Change the secondary browser for opening bookmarks",
-		"variables": {
-			"setting": "browser2",
-			"notifier": "Secondary browser changed"
-		}
-	}
-]}
-EOB</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>skipuniversalaction</key>
-				<true/>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Select Setting</string>
-				<key>type</key>
-				<integer>11</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>83517451-8657-4071-A9D9-BCE60E3988A2</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
