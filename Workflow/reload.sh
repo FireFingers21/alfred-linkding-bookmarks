@@ -17,6 +17,8 @@ case "${http_code}" in
 		    mkdir -p "${favicon_folder}"
 			curl -s --compressed --parallel --output-dir "${favicon_folder}" --remote-name-all -L "${newFavicons[@]}"
 			find "${favicon_folder}" -type f -maxdepth 1 ! -newer "${bookmarks_file}" -delete
+		elif [[ "${useFavicons}" -eq 0 && -d "${favicon_folder}" ]]; then
+            rm -r "${favicon_folder}"
 		fi
 
 		printf "Bookmarks Updated"
