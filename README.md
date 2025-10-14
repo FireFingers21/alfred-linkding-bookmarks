@@ -12,7 +12,7 @@ Set the Base URL and API Token of your [linkding](https://linkding.link/) instal
 
 ## Usage
 
-Search for your [linkding](https://linkding.link/) bookmarks using the `bm` keyword. Type to refine your search.
+Search for your [linkding](https://linkding.link/) bookmarks via the `bm` keyword. Type to refine your search.
 
 ![Searching for linkding bookmarks](Workflow/images/about/keyword.png)
 
