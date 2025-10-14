@@ -9,9 +9,9 @@ case "${http_code}" in
 		readonly favicon_folder="${alfred_workflow_data}/favicons"
 
 		mkdir -p "${alfred_workflow_data}"
-		readonly oldFavicons=($(jq -rs '.[].results | map(.favicon_url) | unique | .[]' ${bookmarks_file}))
+		readonly oldFavicons=($(jq -rs '.[].results | map(.favicon_url | select(. != null)) | unique | .[]' ${bookmarks_file}))
 		echo -nE "${bookmarks%$'\n'*}" > "${bookmarks_file}"
-		readonly newFavicons=($(jq -rs '.[].results | map(.favicon_url) | unique | .[]' ${bookmarks_file}))
+		readonly newFavicons=($(jq -rs '.[].results | map(.favicon_url | select(. != null)) | unique | .[]' ${bookmarks_file}))
 
 		if [[ "${useFavicons}" -eq 1 && ("${oldFavicons}" != "${newFavicons}" || ! -d "${favicon_folder}") ]]; then
 		    mkdir -p "${favicon_folder}"
