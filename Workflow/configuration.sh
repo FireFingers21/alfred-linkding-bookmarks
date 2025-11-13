@@ -25,6 +25,6 @@ cat << EOB
 		"title": "Configure Workflow...",
 		"subtitle": "Open the configuration window for ${alfred_workflow_name}",
 		"variables": { "pref_id": "configure" }
-	},
+	}
 ]}
 EOB

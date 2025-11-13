@@ -527,19 +527,19 @@ fi</string>
 		"valid": "false",
 		"icon": { "path": "${bIcon}" },
 		"mods": {
-			"ctrl": {
-				"subtitle": "${bUrl}"
-			}
+			"ctrl": { "subtitle": "${bUrl}" }
 		}
 	},
 	{
 		"title": "Confirm Delete",
 		"subtitle": "You can't undo this action",
-		"arg": "${bId}"
+		"arg": "${bId}",
+		"icon": { "path": "images/trash.png" },
 	},
 	{
 		"title": "Cancel",
-		"arg": ""
+		"arg": "",
+		"icon": { "path": "images/cancel.png" },
 	}
 ]}
 EOB</string>
@@ -893,14 +893,14 @@ Bookmarks are always searchable by title, while filtering by Description, Notes,
 
 ![Narrowing search for linkding bookmarks](images/about/tagFilter.png)
 
-* &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser
-* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in primary browser without closing Alfred
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser
-* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding
-* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding
-* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding
-* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View all tags and full URL in Large Type
-* &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description
+* &lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in primary browser.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open in primary browser without closing Alfred.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Open bookmark in secondary browser.
+* &lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Edit bookmark in linkding.
+* &lt;kbd&gt;⇧&lt;/kbd&gt;&lt;kbd&gt;⌥&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; View bookmark in linkding.
+* &lt;kbd&gt;⌃&lt;/kbd&gt;&lt;kbd&gt;↩&lt;/kbd&gt; Delete bookmark from linkding.
+* &lt;kbd&gt;⌘&lt;/kbd&gt;&lt;kbd&gt;L&lt;/kbd&gt; View all tags and full URL in Large Type.
+* &lt;kbd&gt;⇧&lt;/kbd&gt; Hold to show bookmark description.
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, such as manually reloading the bookmark cache.
 
@@ -910,7 +910,7 @@ Favicons are supported, and must be enabled in both the [Workflow’s Configurat
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut for searching your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
 
-![Using the Universal Action](images/about/universalAction.png)
+![Using the Universal Action](images/about/ua.png)
 
 Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is case sensitive.</string>
 	<key>uidata</key>
@@ -1195,7 +1195,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<string>Search by Tag</string>
 			</dict>
 			<key>description</key>
-			<string>Prefixing words with # filters by Tag</string>
+			<string>Prefixing words with # filters by Tag.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -1252,7 +1252,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<string>Enable Quick Look</string>
 			</dict>
 			<key>description</key>
-			<string>Tap shift or ⌘Y to Quick Look bookmarks</string>
+			<string>Tap shift or ⌘Y to Quick Look bookmarks.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -1310,7 +1310,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				</array>
 			</dict>
 			<key>description</key>
-			<string>Primary browser for opening bookmarks</string>
+			<string>Primary browser for opening bookmarks.</string>
 			<key>label</key>
 			<string>Default Browsers</string>
 			<key>type</key>
@@ -1368,7 +1368,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				</array>
 			</dict>
 			<key>description</key>
-			<string>Secondary browser for opening bookmarks</string>
+			<string>Secondary browser for opening bookmarks.</string>
 			<key>label</key>
 			<string></string>
 			<key>type</key>
@@ -1393,7 +1393,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Hourly interval to automatically reload bookmarks (0 to disable)</string>
+			<string>Hourly interval to automatically reload bookmarks (0 to disable).</string>
 			<key>label</key>
 			<string>Auto-Update</string>
 			<key>type</key>
@@ -1414,7 +1414,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>The base URL of your linkding installation, without the /bookmark path or a trailing slash</string>
+			<string>The base URL of your linkding installation, without the /bookmark path or a trailing slash.</string>
 			<key>label</key>
 			<string>Base URL</string>
 			<key>type</key>
@@ -1456,7 +1456,7 @@ Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is 
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Limits the maximum number of bookmarks Alfred can pull from linkding</string>
+			<string>Limits the maximum number of bookmarks Alfred can pull from linkding.</string>
 			<key>label</key>
 			<string>API Limit</string>
 			<key>type</key>

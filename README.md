@@ -20,14 +20,14 @@ Bookmarks are always searchable by title, while filtering by Description, Notes,
 
 ![Narrowing search for linkding bookmarks](Workflow/images/about/tagFilter.png)
 
-* <kbd>↩</kbd> Open bookmark in primary browser
-* <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↩</kbd> Open in primary browser without closing Alfred
-* <kbd>⌘</kbd><kbd>↩</kbd> Open bookmark in secondary browser
-* <kbd>⌥</kbd><kbd>↩</kbd> Edit bookmark in linkding
-* <kbd>⇧</kbd><kbd>⌥</kbd><kbd>↩</kbd> View bookmark in linkding
-* <kbd>⌃</kbd><kbd>↩</kbd> Delete bookmark from linkding
-* <kbd>⌘</kbd><kbd>L</kbd> View all tags and full URL in Large Type
-* <kbd>⇧</kbd> Hold to show bookmark description
+* <kbd>↩</kbd> Open bookmark in primary browser.
+* <kbd>⇧</kbd><kbd>⌘</kbd><kbd>↩</kbd> Open in primary browser without closing Alfred.
+* <kbd>⌘</kbd><kbd>↩</kbd> Open bookmark in secondary browser.
+* <kbd>⌥</kbd><kbd>↩</kbd> Edit bookmark in linkding.
+* <kbd>⇧</kbd><kbd>⌥</kbd><kbd>↩</kbd> View bookmark in linkding.
+* <kbd>⌃</kbd><kbd>↩</kbd> Delete bookmark from linkding.
+* <kbd>⌘</kbd><kbd>L</kbd> View all tags and full URL in Large Type.
+* <kbd>⇧</kbd> Hold to show bookmark description.
 
 Append `::` to the configured [Keyword](https://www.alfredapp.com/help/workflows/inputs/keyword) to access other actions, such as manually reloading the bookmark cache.
 
@@ -37,6 +37,6 @@ Favicons are supported, and must be enabled in both the [Workflow’s Configurat
 
 Configure the [Hotkey](https://www.alfredapp.com/help/workflows/triggers/hotkey/) as a shortcut for searching your bookmarks. Use the [Universal Action](https://www.alfredapp.com/help/features/universal-actions/) to bookmark URLs from Alfred’s [Clipboard History](https://www.alfredapp.com/help/features/clipboard/) or selected text.
 
-![Using the Universal Action](Workflow/images/about/universalAction.png)
+![Using the Universal Action](Workflow/images/about/ua.png)
 
 Bookmarks with the tag `Exclude-Alfred` will be hidden from search. This tag is case sensitive.
